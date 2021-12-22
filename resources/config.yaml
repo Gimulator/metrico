@@ -1,0 +1,10 @@
+pods:
+- name : "actor-2239"
+  resources:
+  - "cpu"
+- name: "director-1207-2252"
+  resources:
+  - "cpu"
+- name: "gimulator-2252"
+  resources:
+  - "cpu"
