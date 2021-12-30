@@ -266,7 +266,7 @@ func GetMetrics(ctx context.Context, clientset *k8s.Clientset, metricsClient *me
 						cpuUsage, cpuSuffix = containerMetric.Usage.Cpu().CanonicalizeBytes(cpuUsage)
 
 						var memoryUsage, memorySuffix []byte
-						memoryUsage, memorySuffix = containerMetric.Usage.Memory().CanonicalizeBytes(cpuUsage)
+						memoryUsage, memorySuffix = containerMetric.Usage.Memory().CanonicalizeBytes(memoryUsage)
 
 						sqlite.CleanInsert(db, &types.ResourceSnapshot{
 							PodName:       metric.Name,
